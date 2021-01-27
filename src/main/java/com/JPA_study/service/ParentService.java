@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.validation.constraints.Null;
+
 
 @RequiredArgsConstructor
 @Service
@@ -32,13 +34,13 @@ public class ParentService {
     }
 
     @Transactional
-    public Child delete(Long id){
-        Child child = childRepository.findByChildId(id);
-
+    public void delete(Long id){
+        //Child child = childRepository.findByChildId(id);
+        Parent parent = parentRepository.findByParentId(id);
         //child.setParent(null);
-//        Parent parent = parentRepository.findByParentId(id);
-//        parentRepository.delete(parent);
 
-        return child;
+        childRepository.deleteAll();
+        parentRepository.delete(parent);
+
     }
 }

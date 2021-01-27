@@ -12,16 +12,16 @@ import static javax.persistence.CascadeType.ALL;
 @Data
 public class Parent {
     @Id
-    @GeneratedValue
     @Column(name="parent_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long parentId;
 
     @Column(name = "parent_name")
     private String parentName;
 
-    @OneToMany(cascade = ALL, mappedBy = "parent")
-    @JoinColumn(name = "parent_id")
-    private List<Child> child = new ArrayList<>();
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "parent")
+    //@JoinColumn(name = "parent_id")
+    private List<Child> child = new ArrayList<Child>();
 
 
     public Long getParentId() {

@@ -1,5 +1,6 @@
 package com.JPA_study.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -9,13 +10,16 @@ import javax.persistence.*;
 public class Child {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long childId;
 
     @Column(name = "child_name")
     private String childName;
 
-    @ManyToOne//referencedColumnName="parentId")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "parent")
+
+    @ManyToOne
+    @JoinColumn(name = "parent_id")
     private Parent parent;
 
 

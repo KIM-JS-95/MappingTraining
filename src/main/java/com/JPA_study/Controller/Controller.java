@@ -32,7 +32,8 @@ public class Controller {
 
     @GetMapping("/UPDATE/{id}")
     @ResponseBody
-    public Child delete(@PathVariable Long id){
-        return parentService.delete(id);
+    public Long delete(@PathVariable Long id){
+        parentService.delete(id);
+        return id;
     }
 }

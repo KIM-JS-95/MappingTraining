@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ChildRepository extends JpaRepository<Child, Long> {
 
+    //@Query("select * from CHILD_ID WHERE PARENT_ID= parentId ")
     public Child findByChildId(Long parentId);
 
 }
