@@ -28,19 +28,22 @@ public class ParentService {
     }
 
     @Transactional
-    public Parent findByParentId(Long id){
+    public Parent findById(Long id){
         Parent entity = parentRepository.findByParentId(id);
+
+
+
         return entity;
     }
-
-    @Transactional
-    public void delete(Long id){
-        //Child child = childRepository.findByChildId(id);
-        Parent parent = parentRepository.findByParentId(id);
-        //child.setParent(null);
-
-        childRepository.deleteAll();
-        parentRepository.delete(parent);
-
-    }
+//
+//    @Transactional
+//    public void delete(Long id){
+//        //Child child = childRepository.findByChildId(id);
+//        Parent parent = parentRepository.findById(id);
+//        //child.setParent(null);
+//
+//        childRepository.deleteAll();
+//        parentRepository.delete(parent);
+//
+//    }
 }

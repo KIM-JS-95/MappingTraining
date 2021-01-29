@@ -1,27 +1,26 @@
 package com.JPA_study.Entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Data;
+import lombok.*;
+import lombok.experimental.Accessors;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 
-@Entity
 @Data
+@Entity
+@ToString(exclude = {"parent"})
 public class Child {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long childId;
 
-    @Column(name = "child_name")
+
     private String childName;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "parent")
-
-    @ManyToOne
-    @JoinColumn(name = "parent_id")
-    private Parent parent;
-
+//    @ManyToOne
+//    private Parent parent;
 
 
     public Long getChildId() {
@@ -36,18 +35,15 @@ public class Child {
         return childName;
     }
 
-    public String setChildName(String childName) {
+    public void setChildName(String childName) {
         this.childName = childName;
-        return childName;
     }
 
-    public Parent getParent() {
-        return parent;
-    }
-
-    public void setParent(Parent parent) {
-        this.parent = parent;
-    }
-
-
+//    public Parent getParent() {
+//        return parent;
+//    }
+//
+//    public void setParent(Parent parent) {
+//        this.parent = parent;
+//    }
 }

@@ -24,16 +24,16 @@ public class Controller {
     }
 
     @GetMapping("/{id}")
-    @ResponseBody
     public Parent findByParentId(@PathVariable Long id){
-        return parentService.findByParentId(id);
+
+        return parentService.findById(id);
     }
 
-
-    @GetMapping("/UPDATE/{id}")
-    @ResponseBody
-    public Long delete(@PathVariable Long id){
-        parentService.delete(id);
-        return id;
-    }
+//
+//    @DeleteMapping("/{id}")
+//    @ResponseBody
+//    public Long delete(@PathVariable Long id){
+//        parentService.delete(id);
+//        return id;
+//    }
 }

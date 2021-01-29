@@ -1,14 +1,14 @@
-com/JPA_study/repository/ParentRepository.java
- com.JPA_study.repository.ParentRepository
-com/JPA_study/Entity/Child.java
- com.JPA_study.Entity.Child
-com/JPA_study/Entity/Parent.java
- com.JPA_study.Entity.Parent
-com/JPA_study/repository/ChildRepository.java
- com.JPA_study.repository.ChildRepository
 com/JPA_study/Application.java
  com.JPA_study.Application
+com/JPA_study/Entity/Child.java
+ com.JPA_study.Entity.Child
+com/JPA_study/repository/ChildRepository.java
+ com.JPA_study.repository.ChildRepository
+com/JPA_study/repository/ParentRepository.java
+ com.JPA_study.repository.ParentRepository
 com/JPA_study/service/ParentService.java
  com.JPA_study.service.ParentService
+com/JPA_study/Entity/Parent.java
+ com.JPA_study.Entity.Parent
 com/JPA_study/Controller/Controller.java
  com.JPA_study.Controller.Controller

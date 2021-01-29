@@ -12,6 +12,6 @@ import java.util.List;
 @Repository
 public interface ParentRepository extends JpaRepository<Parent, Long> {
 
-    public Parent findByParentId(Long parentId);
+    Parent findByParentId(Long parentId);
 
 }
