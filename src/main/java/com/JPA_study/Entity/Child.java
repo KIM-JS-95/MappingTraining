@@ -39,6 +39,9 @@ public class Child {
         this.childName = childName;
     }
 
+    public void setParent(Object o) {
+    }
+
 //    public Parent getParent() {
 //        return parent;
 //    }

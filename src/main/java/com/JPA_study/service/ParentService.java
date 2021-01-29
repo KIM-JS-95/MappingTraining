@@ -35,15 +35,14 @@ public class ParentService {
 
         return entity;
     }
-//
-//    @Transactional
-//    public void delete(Long id){
-//        //Child child = childRepository.findByChildId(id);
-//        Parent parent = parentRepository.findById(id);
-//        //child.setParent(null);
-//
-//        childRepository.deleteAll();
-//        parentRepository.delete(parent);
-//
-//    }
+
+    @Transactional
+    public void delete(Long id){
+        Child child = childRepository.findByChildId(id);
+        Parent parent = parentRepository.findByParentId(id);
+        //child.setParent(null);
+
+        childRepository.findByParentId(id);
+        parentRepository.delete(parent);
+    }
 }
