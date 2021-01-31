@@ -29,7 +29,6 @@ public class Controller {
         return parentService.findById(id);
     }
 
-
     @DeleteMapping("/{id}")
     @ResponseBody
     public Long delete(@PathVariable Long id){

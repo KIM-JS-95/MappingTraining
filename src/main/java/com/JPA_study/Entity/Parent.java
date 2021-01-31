@@ -21,7 +21,7 @@ public class Parent {
     @Column(name = "parent_name")
     private String parentName;
 
-    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, orphanRemoval = true)
     @JoinColumn(name = "parent_id",referencedColumnName="parentId")
     //@JoinColumn(name = "parent_id")
     private List<Child> child;

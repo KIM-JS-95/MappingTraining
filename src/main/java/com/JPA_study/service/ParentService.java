@@ -38,11 +38,11 @@ public class ParentService {
 
     @Transactional
     public void delete(Long id){
-        Child child = childRepository.findByChildId(id);
+        //Child child = childRepository.findByChildId(id);
         Parent parent = parentRepository.findByParentId(id);
         //child.setParent(null);
 
-        childRepository.findByParentId(id);
+        //childRepository.findByParentId(id);
         parentRepository.delete(parent);
     }
 }
