@@ -31,4 +31,9 @@ dependencies {
     compile('com.h2database:h2')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 
+
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+    implementation('org.springframework.boot:spring-boot-starter-webflux')
+
 }
