@@ -1,12 +1,10 @@
-com/JPA_study/entity/MessageType.java
- com.JPA_study.entity.MessageType
-com/JPA_study/Controller/ChatController.java
- com.JPA_study.Controller.ChatController
-com/JPA_study/service/WebSocketEventListener.java
- com.JPA_study.service.WebSocketEventListener
-com/JPA_study/service/SocketHandler.java
- com.JPA_study.service.SocketHandler
-com/JPA_study/entity/ChatMessage.java
- com.JPA_study.entity.ChatMessage
-com/JPA_study/Application.java
- com.JPA_study.Application
+com/JPA_study/Controller/IndexController.java
+ com.JPA_study.Controller.IndexController
+com/JPA_study/Controller/Greetings.java
+ com.JPA_study.Controller.Greetings
+com/JPA_study/entity/Country.java
+ com.JPA_study.entity.Country
+com/JPA_study/SpringTestConfiguration.java
+ com.JPA_study.SpringTestConfiguration
+com/JPA_study/entity/City.java
+ com.JPA_study.entity.City
