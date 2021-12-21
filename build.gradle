@@ -2,12 +2,13 @@ buildscript {
     ext {
         springBootVersion = '2.1.9.RELEASE'
     }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
     repositories {
         mavenCentral()
         jcenter()
-    }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
 }
 
@@ -32,6 +33,6 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test')
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.1.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.1.0'
-    compile 'org.springframework.boot:spring-boot-starter-log4j2'
+
 }
 test { useJUnitPlatform() }

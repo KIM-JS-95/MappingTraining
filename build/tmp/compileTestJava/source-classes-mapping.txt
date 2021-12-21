@@ -1,14 +1,2 @@
-com/JPA_study/Controller/junitassertexception.java
- com.JPA_study.Controller.junitassertexception
-com/JPA_study/Controller/RunWithTest.java
- com.JPA_study.Controller.RunWithTest
-com/JPA_study/Controller/BeforeAnnotation.java
- com.JPA_study.Controller.BeforeAnnotation
-com/JPA_study/Controller/Junit5_Intro.java
- com.JPA_study.Controller.Junit5_Intro
-com/JPA_study/Controller/AllUnitTest.java
- com.JPA_study.Controller.AllUnitTest
-com/JPA_study/SpringTestConfigurationTest.java
- com.JPA_study.SpringTestConfigurationTest
-com/JPA_study/Mockito/MockitoAnnotationTest.java
- com.JPA_study.Mockito.MockitoAnnotationTest
+com/JPA_study/entity/MemberTest.java
+ com.JPA_study.entity.MemberTest
