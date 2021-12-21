@@ -3,36 +3,48 @@ package com.JPA_study.entity;
 import com.JPA_study.Repository.MemberRepository;
 import com.JPA_study.Repository.TeamRepository;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.mock.mockito.MockBean;
-
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
 
+@SpringBootTest
 class MemberTest  {
 
-    @Mock
+    @Autowired
     private MemberRepository memberRepository;
 
-    @Mock
+    @Autowired
     private TeamRepository teamRepository;
 
     @Test
     public void creat(){
-        Member member1 = new Member("member1", "회원1");
-        Member member2 = new Member("member2", "회원2");
-        Team team1 = new Team("team1", "팀1");
+        Team team1 = Team.builder()
+                .id("team1")
+                .name("팀1")
+                .build();
+
+        teamRepository.save(team1);
+
+        Member member1  = Member.builder()
+                .id("member1")
+                .username("회원1")
+                .build();
+
+        Member member2  = Member.builder()
+                .id("member2")
+                .username("회원2")
+                .build();
 
         member1.setTeam(team1);
         member2.setTeam(team1);
 
-        teamRepository.save(team1);
         memberRepository.save(member1);
+        memberRepository.save(member2);
 
         // 리스트 저장 데이터 출력
-        List<Member> members = team1.getMembers();
+        List<Member> members = memberRepository.findAll();
 
         for(Member val : members)
         System.out.println(val.getTeam().getName());

@@ -1,10 +1,12 @@
 com/JPA_study/SpringTestConfiguration.java
  com.JPA_study.SpringTestConfiguration
-com/JPA_study/entity/Team.java
- com.JPA_study.entity.Team
-com/JPA_study/entity/Member.java
- com.JPA_study.entity.Member
-com/JPA_study/Repository/MemberRepository.java
- com.JPA_study.Repository.MemberRepository
 com/JPA_study/Repository/TeamRepository.java
  com.JPA_study.Repository.TeamRepository
+com/JPA_study/entity/Team.java
+ com.JPA_study.entity.Team
+ com.JPA_study.entity.Team$TeamBuilder
+com/JPA_study/entity/Member.java
+ com.JPA_study.entity.Member
+ com.JPA_study.entity.Member$MemberBuilder
+com/JPA_study/Repository/MemberRepository.java
+ com.JPA_study.Repository.MemberRepository
