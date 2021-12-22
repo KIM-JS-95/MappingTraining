@@ -1,12 +1,24 @@
 com/JPA_study/SpringTestConfiguration.java
  com.JPA_study.SpringTestConfiguration
-com/JPA_study/Repository/TeamRepository.java
- com.JPA_study.Repository.TeamRepository
-com/JPA_study/entity/Team.java
- com.JPA_study.entity.Team
- com.JPA_study.entity.Team$TeamBuilder
+com/JPA_study/entity/DeliveryStatus.java
+ com.JPA_study.entity.DeliveryStatus
 com/JPA_study/entity/Member.java
  com.JPA_study.entity.Member
  com.JPA_study.entity.Member$MemberBuilder
 com/JPA_study/Repository/MemberRepository.java
  com.JPA_study.Repository.MemberRepository
+com/JPA_study/entity/Category.java
+ com.JPA_study.entity.Category
+ com.JPA_study.entity.Category$CategoryBuilder
+com/JPA_study/entity/OrderStatus.java
+ com.JPA_study.entity.OrderStatus
+com/JPA_study/entity/Delivery.java
+ com.JPA_study.entity.Delivery
+com/JPA_study/entity/Orders.java
+ com.JPA_study.entity.Orders
+ com.JPA_study.entity.Orders$OrdersBuilder
+com/JPA_study/entity/Item.java
+ com.JPA_study.entity.Item
+ com.JPA_study.entity.Item$ItemBuilder
+com/JPA_study/entity/OrderItem.java
+ com.JPA_study.entity.OrderItem

@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -15,13 +17,16 @@ import javax.persistence.*;
 public class Member {
 
     @Id
+    @GeneratedValue
     @Column(name = "MEMBER_ID")
-    private String id;
+    private Long id;
 
-    private String username;
+    private String name;
+    private String city;
+    private String street;
+    private String zipcode;
 
-    @ManyToOne
-    @JoinColumn(name = "TEAM_ID")
-    private Team team;
+    @OneToMany
+    private List<Orders> orders = new ArrayList<>();
 
 }
