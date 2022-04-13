@@ -27,15 +27,26 @@ repositories {
 
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
-    compile('org.projectlombok:lombok')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
-    compile('mysql:mysql-connector-java')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
+
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.1.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.1.0'
 
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
+
+    // spring-data-redis
+    compile('org.springframework.boot:spring-boot-starter-data-redis')
+    //embedded-redis
+    compile group: 'it.ozimov', name: 'embedded-redis', version: '0.7.2'
+
     annotationProcessor('org.projectlombok:lombok')
     testAnnotationProcessor('org.projectlombok:lombok')
+
+    // https://mvnrepository.com/artifact/com.h2database/h2
+    testImplementation group: 'com.h2database', name: 'h2', version: '1.4.200'
+
 
 }
 test { useJUnitPlatform() }

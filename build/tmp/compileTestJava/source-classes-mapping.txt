@@ -1,2 +1,2 @@
-com/JPA_study/entity/MemberTest.java
- com.JPA_study.entity.MemberTest
+com/JPA_study/Repository/PersonRedisRepositoryTest.java
+ com.JPA_study.Repository.PersonRedisRepositoryTest
