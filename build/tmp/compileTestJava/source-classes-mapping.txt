@@ -1,2 +1,0 @@
-com/JPA_study/Repository/PersonRedisRepositoryTest.java
- com.JPA_study.Repository.PersonRedisRepositoryTest
